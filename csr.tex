@@ -1,0 +1,50 @@
+%!tikz editor 1.0
+\documentclass{article}
+\usepackage{tikz}
+\usepackage[graphics, active, tightpage]{preview}
+\PreviewEnvironment{tikzpicture}
+
+%!tikz preamble begin
+
+%!tikz preamble end
+
+
+\begin{document}
+\begin{figure}
+%!tikz source begin
+\begin{tikzpicture}
+
+\usetikzlibrary{snakes}
+
+\foreach \x in {0,0.5,1,1.5}
+\draw [black,fill=red!70] (\x,0) rectangle (\x+0.5,1);
+
+\node at (0.25,0.5) {3};
+\node at (0.75,0.5) {4};
+\node at (1.25,0.5) {2};
+\node at (1.75,0.5) {7};
+
+\foreach \x in {0,0.5,1,1.5}
+\draw [black,fill=red!70] (\x,-0.1) rectangle (\x+0.5,-1.1);
+
+\node at (0.25,-0.6) {0};
+\node at (0.75,-0.6) {3};
+\node at (1.25,-0.6) {7};
+\node at (1.75,-0.6) {9};
+
+\draw[snake=brace] (0,1.125)--(2,1.125);
+\node at (1.25, 1.5) {left\_nonzero\_size};
+
+\draw[fill=red!20] (0,-2.5) rectangle +(7,-0.5);
+\draw[fill=red!20] (0,-3.1) rectangle +(7,-0.5);
+
+\draw[->] (0.25,-1.125)--(0.25,-2.5);
+\draw[->] (0.75,-1.125)--(2.25,-2.5);
+\draw[->] (1.25,-1.125)--(4.25,-2.5);
+\draw[->] (1.75,-1.125)--(5.25,-2.5);
+
+\end{tikzpicture}
+%!tikz source end
+
+\end{figure}
+\end{document}

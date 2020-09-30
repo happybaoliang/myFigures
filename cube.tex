@@ -1,0 +1,55 @@
+%!tikz editor 1.0
+\documentclass{article}
+\usepackage{tikz}
+\usepackage[graphics, active, tightpage]{preview}
+\PreviewEnvironment{tikzpicture}
+
+%!tikz preamble begin
+
+%!tikz preamble end
+
+
+\begin{document}
+\begin{figure}
+%!tikz source begin
+\begin{tikzpicture}
+
+%\draw[help lines] (0,-9) grid (9,1);
+
+%basic cube
+\draw (0,0) rectangle (8,-8);
+\draw (0,0)->+(1,1);
+\draw (8,0)->+(1,1);
+\draw (1,1)->+(8,0);
+\draw (9,1)->+(0,-8);
+\draw (9,-7)->+(-1,-1);
+\draw [dashed] (1,1)->+(0,-8);
+\draw [dashed] (1,-7)->+(-1,-1);
+\draw [dashed] (1,-7)->+(8,0);
+
+
+%basic node
+\node [above] at (4,0) {$W=80$};
+\node [left] at (0,-4) {$C=160B$};
+\node at (0,0.75) {$H=80$};
+
+%small cube
+\draw [red] (0,0) rectangle (2,-2);
+\draw [red] (0.25,0.25)->+(2,0);
+\draw [red] (2.25,0.25)->+(-0.25,-0.25);
+\draw [red, dashed] (0.25,0.25)->+(0,-2);
+\draw [red, dashed] (2.25,0.25)->+(0,-2);
+\draw [red, dashed] (0.25,-1.75)->+(2,0);
+\draw [red, dashed] (2.25,-1.75)->+(-0.25,-0.25);
+\draw [red, dashed] (0.25,-1.75)->+(-0.25,-0.25);
+
+%small node
+\node [left] at (0,-1) {$n_0=16$};
+\node [below] at (1, 0) {$n_1=8$};
+\node [left] at (0, 0.125) {$n_2=4$};
+
+\end{tikzpicture}
+%!tikz source end
+
+\end{figure}
+\end{document}
