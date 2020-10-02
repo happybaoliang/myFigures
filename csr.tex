@@ -19,6 +19,8 @@
 \foreach \x in {0,0.5,1,1.5}
 \draw [black,fill=red!70] (\x,0) rectangle (\x+0.5,1);
 
+\node[left] at (0,0.5) {left\_size};
+
 \node at (0.25,0.5) {3};
 \node at (0.75,0.5) {4};
 \node at (1.25,0.5) {2};
@@ -26,6 +28,8 @@
 
 \foreach \x in {0,0.5,1,1.5}
 \draw [black,fill=red!70] (\x,-0.1) rectangle (\x+0.5,-1.1);
+
+\node[left] at (0,-0.6) {left\_offset};
 
 \node at (0.25,-0.6) {0};
 \node at (0.75,-0.6) {3};
@@ -35,13 +39,18 @@
 \draw[snake=brace] (0,1.125)--(2,1.125);
 \node at (1.25, 1.5) {left\_nonzero\_size};
 
-\draw[fill=red!20] (0,-2.5) rectangle +(7,-0.5);
-\draw[fill=red!20] (0,-3.1) rectangle +(7,-0.5);
+\draw (0,-2.5) grid[xstep=0.5,ystep=0.5] (7,-3);
+\node[left] at (0,-2.75) {left\_data};
+
+\draw (0,-3.1) grid[xstep=0.5] (7,-3.6);
+\draw (0,-3.1)--(7,-3.1);
+\draw (0,-3.6)--(7,-3.6);
+\node[left] at (0,-3.35) {left\_index};
 
 \draw[->] (0.25,-1.125)--(0.25,-2.5);
-\draw[->] (0.75,-1.125)--(2.25,-2.5);
-\draw[->] (1.25,-1.125)--(4.25,-2.5);
-\draw[->] (1.75,-1.125)--(5.25,-2.5);
+\draw[->] (0.75,-1.125)--(1.75,-2.5);
+\draw[->] (1.25,-1.125)--(3.75,-2.5);
+\draw[->] (1.75,-1.125)--(4.75,-2.5);
 
 \end{tikzpicture}
 %!tikz source end

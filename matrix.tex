@@ -1,0 +1,51 @@
+%!tikz editor 1.0
+\documentclass{article}
+\usepackage{tikz}
+\usepackage[graphics, active, tightpage]{preview}
+\PreviewEnvironment{tikzpicture}
+
+%!tikz preamble begin
+
+%!tikz preamble end
+
+
+\begin{document}
+\begin{figure}
+%!tikz source begin
+\begin{tikzpicture}
+
+%\usetikzlibrary{matrix}
+
+\coordinate (A) at (0,0,0);
+\coordinate (B) at (8,0,0);
+\coordinate (C) at (0,-8,0);
+\coordinate (D) at (8,-8,0);
+\coordinate (E) at (0,0,8);
+\coordinate (F) at (8,0,8);
+\coordinate (G) at (0,-8,8);
+\coordinate (H) at (8,-8,8);
+
+\draw (A)--(B);
+\draw[dashed] (A)--(C);
+\draw[dashed] (C)--(D);
+\draw (B)--(D);
+
+\draw (E)--(F);
+\draw (E)--(G);
+\draw (G)--(H);
+\draw (F)--(H);
+\draw (A)--(E);
+\draw (B) -- (F);
+\draw[dashed] (C)--(G);
+\draw (D)--(H);
+
+\matrix{
+\node {AA}; && \node {BB};\\
+\draw (0,0) circle;&&\\
+};
+
+\end{tikzpicture}
+%!tikz source end
+
+\end{figure}
+\end{document}
